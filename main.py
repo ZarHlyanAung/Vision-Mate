@@ -7,7 +7,7 @@ import tensorflow as tf
 class_labels = ["10000", "5000", "1000", "500", "other"]
 
 def loadModel():
-    model = tf.keras.models.load_model("vision-mate-1.h5")
+    model = tf.keras.models.load_model("vision-mate-4.h5")
     return model
 
 
@@ -28,7 +28,7 @@ if uploaded_file is not None:
     st.image(image, caption='Uploaded Image', use_column_width=True)
         
     # Preprocess the image for model input
-    image = image.resize((150, 150)) # Resize the image to match the input size of the model
+    image = image.resize((100, 100)) # Resize the image to match the input size of the model
     image = np.array(image) # Convert the image to a numpy array
     image = image / 255.0 # Normalize the pixel values to [0, 1]
     image = np.expand_dims(image, axis=0) # Add an extra dimension for batch size
