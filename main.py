@@ -4,10 +4,10 @@ import numpy as np
 import tensorflow as tf
 
 # Define the class labels
-class_labels = ["1000", "10000", "500", "5000", "other"]
+class_labels = ["100", "1000", "10000", "200", "50", "500", "5000", "other"]
 
 def loadModel():
-    model = tf.keras.models.load_model("vision-mate-4.h5")
+    model = tf.keras.models.load_model("vision-mate-5.h5")
     return model
 
 
