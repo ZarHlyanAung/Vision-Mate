@@ -1,0 +1,4 @@
+streamlit
+tensorflow
+tensorflow-probability
+opencv-python-headless 
