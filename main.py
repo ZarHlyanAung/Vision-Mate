@@ -15,10 +15,10 @@ model = loadModel()
 
 # Define the Streamlit app
 st.title('Vision Mate Demo')
-st.sidebar.title('Upload Image')
+# st.sidebar.title('Upload Image')
     
 # Create a file uploader in the sidebar
-uploaded_file = st.sidebar.file_uploader('Upload an image', type=['jpg', 'jpeg', 'png'])
+uploaded_file = st.file_uploader('Upload an image of a Myanmar bank note', type=['jpg', 'jpeg', 'png'])
     
 if uploaded_file is not None:
     # Read the uploaded image
