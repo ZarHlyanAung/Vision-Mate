@@ -7,7 +7,7 @@ import tensorflow as tf
 class_labels = ["100", "1000", "10000", "200", "50", "500", "5000", "other"]
 
 def loadModel():
-    model = tf.keras.models.load_model("vision-mate-8.h5")
+    model = tf.keras.models.load_model("vision-mate-9.h5")
     return model
 
 model = loadModel()
