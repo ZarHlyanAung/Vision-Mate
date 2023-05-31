@@ -33,7 +33,7 @@ if uploaded_file is not None:
 
     # Preprocess the image for model input
     # Resize the image to match the input size of the model
-    resized_image = grayscale_image.resize((100, 100))
+    resized_image = grayscale_image.resize((150, 150))
     image_array = np.array(resized_image)  # Convert the image to a numpy array
     # Normalize the pixel values to [0, 1]
     normalized_image = image_array / 255.0
