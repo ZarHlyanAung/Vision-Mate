@@ -8,7 +8,7 @@ class_labels = ["100", "1000", "10000", "200", "50", "500", "5000", "other"]
 
 
 def loadModel():
-    model = tf.keras.models.load_model("vision-mate-12.h5")
+    model = tf.keras.models.load_model("vision-mate-13.h5")
     return model
 
 
@@ -26,14 +26,14 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
 
     # Convert image to grayscale
-    grayscale_image = image.convert('L')
+#     grayscale_image = image.convert('L')
 
     # Display the uploaded grayscale image
-    st.image(grayscale_image, caption='Grayscale Image', use_column_width=True)
+    st.image(image, caption='Grayscale Image', use_column_width=True)
 
     # Preprocess the image for model input
     # Resize the image to match the input size of the model
-    resized_image = grayscale_image.resize((150, 150))
+    resized_image = image.resize((150, 150))
     image_array = np.array(resized_image)  # Convert the image to a numpy array
     # Normalize the pixel values to [0, 1]
     normalized_image = image_array / 255.0
